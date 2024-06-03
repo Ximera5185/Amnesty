@@ -10,6 +10,9 @@ namespace Amnesty
     {
         static void Main(string [] args)
         {
+            UserInterface userInterface = new UserInterface();
+
+            Console.ReadKey();
         }
     }
 }
