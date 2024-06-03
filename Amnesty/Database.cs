@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Amnesty
 {
@@ -26,13 +27,7 @@ namespace Amnesty
         {
             string valueCrime = "Антиправительственное";
 
-            for (int i = _criminals.Count -1; i != 0 ; i--)
-            {
-                if (_criminals[i].Сrime == valueCrime)
-                {
-                    _criminals.RemoveAt(i);
-                }
-            }
+           _criminals = _criminals.Where(criminal => criminal.Сrime != valueCrime).ToList();
         }
 
         private void AddCriminalToList() 
